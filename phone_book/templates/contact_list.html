@@ -84,6 +84,8 @@
                         <div class="actions">
                             <a href="tel:{{ contact.phone }}" class="call">Call</a>
                             <a href="{% url 'edit_contact' contact.id %}" class="edit">Edit</a>
+                           
+
                             <a href="{% url 'delete_contact' contact.id %}" class="delete" onclick="return confirm('Are you sure you want to delete this contact?');">Delete</a>
                         </div>
                     </div>
