@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Details</title>
+</head>
+<body>
+    <h1>{{ contact.name }}</h1>
+    <p>Email: {{ contact.email }}</p>
+    <p>Phone: {{ contact.phone }}</p>
+    <p>Alternative: {{ contact.alternative }}</p>
+    {% if contact.image %}
+    <img src="{{ contact.image.url }}" alt="Contact Image" width="200">
+    {% endif %}
+    <br>
+    <a href="{% url 'contact_list' %}">Back to Contact List</a>
+</body>
+</html>

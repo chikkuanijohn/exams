@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{ contact.name }}</h1>
+<img src="{{ contact.photo.url }}" alt="Photo of {{ contact.name }}" style="width: 100px;">
+<p>Phone: {{ contact.phone }}</p>
+<p>Email: {{ contact.email }}</p>
+
+<a href="{% url 'call_page' contact.pk %}">Call</a> |
+<a href="{% url 'edit_contact' contact.pk %}">Edit</a> |
+<a href="{% url 'delete_contact' contact.pk %}">Delete</a>
+
+</body>
+</html>

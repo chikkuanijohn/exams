@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calling {{ contact.name }}</h1>
+<img src="{{ contact.photo.url }}" alt="Photo of {{ contact.name }}" style="width: 200px;">
+<br>
+<a href="{% url 'contact_detail' contact.pk %}" style="background-color: red; color: white; padding: 10px 20px; text-decoration: none;">
+    End Call
+</a>
+
+</body>
+</html>
